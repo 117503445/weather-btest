@@ -15,9 +15,9 @@
     <div class="head_box" style="background-color:slategray;">
         <!--最上面的颜色-->
         <div class="head clearfix">
-            <a class="logo" href="/">
+            <!-- <a class="logo" href="/">
                 <img src="res/RoomWeather.png" alt="RoomWeather" height="31">
-            </a>
+            </a> -->
         </div>
     </div>
     <div id="aqi" class="clearfix" style="background: whitesmoke;">
@@ -35,7 +35,8 @@
                 </div>
                 <div class="aqi_info_time">
                     <h1 id="aqiinfo" style="color: black">Current AQI</h1>
-                    <b id="faburiqi" style="color: black">发布日期：{{time}}</b>
+                    <b id="faburiqi" style="color: black">发布日期</b>
+                    <b id="city" style="color: black">城市</b>
                 </div>
                 <dl class="aqi_info_tips">
                     <dt style="color: black">温馨提醒 :</dt>
@@ -64,6 +65,7 @@
             document.getElementById('faburiqi').innerHTML = "发布日期 " + obj["update_time"];
             document.getElementById('wendu').innerHTML = obj["data"][0]["tem"];
             document.getElementById('tianqi').innerHTML = obj["data"][0]["wea"];
+            document.getElementById('city').innerHTML = obj["city"];
             document.getElementById('aqiinfo').innerHTML = "Current AQI " + obj["data"][0]["air"];
 
             var day_array = [];
